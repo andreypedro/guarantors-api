@@ -50,7 +50,7 @@ This API validates and standardizes property addresses. It exposes a single endp
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/andreypedro/guarantors-api
    cd guarantors-api
    ```
 
@@ -84,9 +84,3 @@ The tests include:
 - Managing unverifiable addresses.
 
 The tests use mocked responses from the Nominatim API to ensure consistent results without relying on external services.
-
-## Repository
-This project is hosted on a publicly accessible Git repository. Clone and explore the codebase for more details.
-
----
-Feel free to reach out for any questions or improvements!
