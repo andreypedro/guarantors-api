@@ -9,7 +9,7 @@ This API validates and standardizes property addresses. It exposes a single endp
 ### Input
 ```json
 {
-  "address": "123 Main St, Springfield, IL"
+  "address": "123 Main St, Mountain View, IL"
 }
 ```
 
@@ -18,11 +18,11 @@ This API validates and standardizes property addresses. It exposes a single endp
 {
   "street": "Main St",
   "number": "123",
-  "city": "Springfield",
+  "city": "Mountain View",
   "state": "IL",
   "zip": "62701",
   "status": "valid",
-  "originalInput": "123 Main St, Springfield, IL"
+  "originalInput": "123 Main St, Mountain View, IL"
 }
 ```
 
