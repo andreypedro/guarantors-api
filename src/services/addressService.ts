@@ -12,14 +12,11 @@ export async function validateAddress(address: string): Promise<IAddress> {
     };
 
     try {
-        console.log('Requesting address validation for:', address);
         const response = await axios.get(url, { params, headers: { 'User-Agent': 'guarantors-api/1.0' } });
-        console.log('Response from Nominatim:', response.data);
 
         const data = response.data;
 
         if (!Array.isArray(data) || data.length === 0) {
-            console.log('No valid address found.');
             return {
                 status: 'unverifiable',
                 originalInput: address,
@@ -42,10 +39,8 @@ export async function validateAddress(address: string): Promise<IAddress> {
             structured.correctedInput = data[0].display_name;
         }
 
-        console.log('Structured address:', structured);
         return structured;
     } catch (error) {
-        console.error('Error validating address:', error);
         throw new Error('Failed to validate address');
     }
 }
