@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 import dotenv from "dotenv";
 import addressRoutes from "./routes/addressRoutes";
-// import errorHandler from "./middleware/errorHandler";
+import { errorHandler } from "./middlewares/errorHandler";
 
 dotenv.config();
 
@@ -15,6 +15,6 @@ app.get("/", (_: Request, res: Response) => {
   res.json({ message: "API is running." });
 });
 
-// app.use(errorHandler);
+app.use(errorHandler);
 
 export default app;
