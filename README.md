@@ -35,7 +35,7 @@ This API validates and standardizes property addresses. It exposes a single endp
 ## Thought Process
 
 1. **Design**: Focused on clean code, clear error handling, and modular structure.
-2. **Validation**: Used Nominatim (OpenStreetMap) API to validate and standardize addresses.
+2. **Address Validation**: Used Nominatim (OpenStreetMap) API to validate and standardize addresses.
 3. **Edge Cases**: Handled partial addresses, typos, and unverifiable inputs gracefully.
 
 ## Tools Used
@@ -45,7 +45,7 @@ This API validates and standardizes property addresses. It exposes a single endp
 - **Axios**: HTTP client for API requests.
 - **TypeScript**: Type-safe development.
 - **Nominatim API**: External address validation.
-- **AI Assistance**: Used AI prompts for design and implementation guidance.
+- **AI Assistance**: Used AI prompts to aid in writing tests, documenting, fixing code, and improving best practices.
 
 ## How to Run Locally
 
