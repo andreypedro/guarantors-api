@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import { validateAddress } from '../services/addressService';
 
+// controller responsible for validating addresses
 export const validateAddressController = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     const { address } = req.body;
 
@@ -10,6 +11,8 @@ export const validateAddressController = async (req: Request, res: Response, nex
     }
 
     try {
+
+        // calling the service responsible to validating addresses.
         const result = await validateAddress(address);
         res.json(result);
     } catch (error) {
