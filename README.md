@@ -1,12 +1,15 @@
 # Guarantors API
 
 ## Overview
+
 This API validates and standardizes property addresses. It exposes a single endpoint:
 
 ### Endpoint
+
 `POST /validate-address`
 
 ### Input
+
 ```json
 {
   "address": "123 Main St, Mountain View, IL"
@@ -14,6 +17,7 @@ This API validates and standardizes property addresses. It exposes a single endp
 ```
 
 ### Output
+
 ```json
 {
   "street": "Main St",
@@ -29,11 +33,13 @@ This API validates and standardizes property addresses. It exposes a single endp
 - **status**: Indicates whether the address is `valid`, `corrected`, or `unverifiable`.
 
 ## Thought Process
+
 1. **Design**: Focused on clean code, clear error handling, and modular structure.
 2. **Validation**: Used Nominatim (OpenStreetMap) API to validate and standardize addresses.
 3. **Edge Cases**: Handled partial addresses, typos, and unverifiable inputs gracefully.
 
 ## Tools Used
+
 - **Node.js**: Backend runtime.
 - **Express**: Web framework.
 - **Axios**: HTTP client for API requests.
@@ -44,22 +50,27 @@ This API validates and standardizes property addresses. It exposes a single endp
 ## How to Run Locally
 
 ### Prerequisites
+
 - Node.js installed.
 - NPM installed.
 
 ### Steps
+
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/andreypedro/guarantors-api
    cd guarantors-api
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Start the development server:
+
    ```bash
    npm run dev
    ```
@@ -78,7 +89,9 @@ npm run test
 ```
 
 ### Example Output
+
 The tests include:
+
 - Validating a correct address structure.
 - Handling invalid input gracefully.
 - Managing unverifiable addresses.
